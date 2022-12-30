@@ -1,0 +1,252 @@
+body {
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1c4261 0%, rgb(2, 0, 36) 100%)
+}
+
+body .container {
+  width: 1080px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  text-align: center
+}
+
+body .container .score-box .wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  width: 700px;
+  height: 140px;
+  border: solid 2px rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  box-shadow: -2px 2px 8px 2px rgba(2, 0, 36, .4)
+}
+
+body .container .score-box .wrapper .game-name {
+  text-align: start;
+  margin-left: 30px;
+  line-height: 1.2;
+  color: #dfecf3;
+  font-family: "Bebas Neue", cursive;
+  font-size: 34px;
+  text-shadow: -4px 2px 2px rgba(2, 0, 36, .5)
+}
+
+body .container .score-box .wrapper .first-score-table {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, rgba(0, 248, 255, 0.8) 6%, #dfecf3 70%);
+  margin-right: 30px;
+  height: 118px;
+  width: 105px;
+  border-radius: 18px;
+  padding: 10px 0 24px 0;
+  box-shadow: -3px 2px 8px 2px rgba(2, 0, 36, .4)
+}
+
+body .container .score-box .wrapper .first-score-table .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  margin: 0 auto;
+  width: 60%;
+  height: 27%;
+  border-radius: 10px;
+  box-shadow: 2px 3px 1px 1px rgba(2, 0, 36, .5) inset;
+  background-color: #f8fbfd;
+  font-family: "Bebas Neue", cursive;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(2, 153, 52, .9);
+  text-shadow: -2px 1px 1px rgba(2, 0, 36, .1);
+  z-index: 100
+}
+
+body .container .score-box .wrapper .first-score-table .score {
+  font-family: "Bebas Neue", cursive;
+  font-size: 70px;
+  color: #4a494e;
+  z-index: 100
+}
+
+body .container .score-box .wrapper .first-score-table:before {
+  content: url(../images/thumb-up.svg);
+  position: absolute;
+  left: 12px;
+  top: 45px;
+  width: 80%;
+  opacity: 25%;
+  transition-delay: .3s;
+  transition-duration: .3s
+}
+
+body .container .score-box .wrapper .first-score-table.active:before {
+  content: url(../images/thumb-up.svg);
+  position: absolute;
+  left: 12px;
+  top: 45px;
+  width: 80%;
+  opacity: 80%;
+  transition-delay: .3s;
+  transition-duration: .3s
+}
+
+body .container .score-box .wrapper .second-score-table {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, rgba(255, 141, 0, 0.9) 8%, #dfecf3 70%);
+  margin-right: 30px;
+  height: 118px;
+  width: 105px;
+  border-radius: 18px;
+  padding: 10px 0 24px 0;
+  box-shadow: -3px 2px 8px 2px rgba(2, 0, 36, .4)
+}
+
+body .container .score-box .wrapper .second-score-table .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  margin: 0 auto;
+  width: 60%;
+  height: 27%;
+  border-radius: 10px;
+  box-shadow: 2px 3px 1px 1px rgba(2, 0, 36, .5) inset;
+  background-color: #f8fbfd;
+  font-family: "Bebas Neue", cursive;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(203, 19, 19, .7);
+  text-shadow: -1px 1px 1px rgba(2, 0, 36, .1);
+  z-index: 100
+}
+
+body .container .score-box .wrapper .second-score-table .score {
+  font-family: "Bebas Neue", cursive;
+  font-size: 70px;
+  color: #4a494e;
+  z-index: 100
+}
+
+body .container .score-box .wrapper .second-score-table:before {
+  content: url(../images/thumb-down.svg);
+  position: absolute;
+  left: 10px;
+  top: 28px;
+  width: 80%;
+  opacity: 25%;
+  transition-delay: .3s;
+  transition-duration: .3s
+}
+
+body .container .score-box .wrapper .second-score-table.active:before {
+  content: url(../images/thumb-down.svg);
+  position: absolute;
+  left: 10px;
+  top: 28px;
+  width: 80%;
+  opacity: 80%;
+  transition-delay: .3s;
+  transition-duration: .3s
+}
+
+body .container .results-table {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 150px
+}
+
+body .container .won {
+  font-family: "Orbitron", sans-seri;
+  font-size: 70px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #dfecf3;
+  text-shadow: -3px 3px 1px rgba(0, 255, 0, .4)
+}
+
+body .container .lose {
+  font-family: "Orbitron", sans-seri;
+  font-size: 70px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #dfecf3;
+  text-shadow: -3px 3px 1px rgba(255, 0, 0, .4)
+}
+
+body .container .draw {
+  font-family: "Orbitron", sans-seri;
+  font-size: 70px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #dfecf3;
+  text-shadow: -3px 3px 1px rgba(255, 255, 102, .7)
+}
+
+body .container .game-table {
+  position: relative;
+  margin-top: 30px;
+  width: 370px;
+  height: 427px;
+  background-size: contain;
+  background-image: url(../images/bg-triangle.svg);
+  background-position: top;
+  background-repeat: no-repeat
+}
+
+body .container .game-table .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #dfecf3;
+  border-radius: 100%;
+  cursor: pointer
+}
+
+body .container .game-table .rock {
+  left: 0px;
+  transform: translate(83%, 25%) rotate(-45deg);
+  border: double 20px rgba(0, 0, 0, 0);
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #e9c31b, #f3dc75);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 8px #d3960f, 0 6px rgba(113, 113, 113, .42) inset
+}
+
+body .container .game-table .paper {
+  left: 314px;
+  transform: translate(-141%, 25%) rotate(-45deg);
+  border: double 20px rgba(0, 0, 0, 0);
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #03c48a, #33e6b0);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 8px #0c7d62, 0 6px rgba(113, 113, 113, .42) inset
+}
+
+body .container .game-table .scissors {
+  left: 150px;
+  top: 258px;
+  transform: translate(-24%, -159%) rotate(-45deg);
+  border: double 20px rgba(0, 0, 0, 0);
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f38ae2, #fcaeef);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 8px #b45aae, 0 6px rgba(113, 113, 113, .42) inset
+}

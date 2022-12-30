@@ -1,0 +1,11 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "rock-paper-scissors game ",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Ruslan Grinov",
+  "license": "ISC"
+}
