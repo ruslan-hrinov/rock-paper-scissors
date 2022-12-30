@@ -38,7 +38,7 @@ const gameProcess = () => {
           const newScissorsItem = document.createElement('div');
           newScissorsItem.classList.add('item');
           newScissorsItem.classList.add('scissors');
-          newScissorsItem.innerHTML = '<img src="images/icon-scissors.svg">';
+          newScissorsItem.innerHTML = '<img src="src/images/icon-scissors.svg">';
           newScissorsItem.setAttribute('data-clone', '');
           gameTable.append(newScissorsItem);
           elementWithEvent.style.filter = 'brightness(30%)';
@@ -62,7 +62,7 @@ const gameProcess = () => {
           const newPaperItem = document.createElement('div');
           newPaperItem.classList.add('item');
           newPaperItem.classList.add('paper');
-          newPaperItem.innerHTML = '<img src="images/icon-paper.svg">';
+          newPaperItem.innerHTML = '<img src="src/images/icon-paper.svg">';
           newPaperItem.setAttribute('data-clone', '');
           gameTable.append(newPaperItem);
           elementWithEvent.style.filter = 'brightness(30%)';
@@ -86,7 +86,7 @@ const gameProcess = () => {
           const newRockItem = document.createElement('div');
           newRockItem.classList.add('item');
           newRockItem.classList.add('rock');
-          newRockItem.innerHTML = '<img src="images/icon-rock.svg">';
+          newRockItem.innerHTML = '<img src="src/images/icon-rock.svg">';
           newRockItem.setAttribute('data-clone', '');
           gameTable.append(newRockItem);
           elementWithEvent.style.filter = 'brightness(30%)';
