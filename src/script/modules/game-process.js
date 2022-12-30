@@ -1,7 +1,7 @@
 import itemsMoveIntoPosition from "./itemsMoveIntoPosition";
 const gameProcess = () => {
-  const switchingSound = new Audio('../src/sounds/switching.wav');
-  const lastSwitchSound = new Audio('../src/sounds/last-switch.wav');
+  const switchingSound = new Audio('/src/sounds/switching.wav');
+  const lastSwitchSound = new Audio('/src/sounds/last-switch.wav');
   const item = document.querySelectorAll('.item');
   const gameTable = document.querySelector('.game-table');
   const resultsTable = document.querySelector('.results-table');
