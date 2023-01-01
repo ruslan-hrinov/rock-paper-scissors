@@ -9,7 +9,16 @@ const gameProcess = () => {
   const secondScore = document.querySelector('.second-score-table .score');
   const secondScoreTable = document.querySelector('.second-score-table');
   let loseScore = +firstScore.getAttribute('data-score');
-  const readyToStartNewGame = () => { item.forEach((element) => { element.addEventListener('click', () => { game(element) }, { once: true }) }) };
+  const readyToStartNewGame = () => {
+    item.forEach((element) => {
+      element.addEventListener('click', (event) => {
+        event.preventDefault();
+        game(element)
+      }, {
+        once: true
+      })
+    })
+  };
   const game = (elementWithEvent) => {
     new Promise((resolve) => {
       if (!gameTable.getAttribute('data-game-status')) {
