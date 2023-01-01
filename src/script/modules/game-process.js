@@ -1,5 +1,6 @@
 import itemsMoveIntoPosition from "./itemsMoveIntoPosition";
 const gameProcess = () => {
+  const lastSwitchSound = new Audio('https://www.fesliyanstudios.com/play-mp3/5269');
   const item = document.querySelectorAll('.item');
   const gameTable = document.querySelector('.game-table');
   const resultsTable = document.querySelector('.results-table');
@@ -18,7 +19,7 @@ const gameProcess = () => {
         once: true
       })
     })
-  };
+  }
   const game = (elementWithEvent) => {
     new Promise((resolve) => {
       if (!gameTable.getAttribute('data-game-status')) {
@@ -141,6 +142,7 @@ const gameProcess = () => {
                   item[currentComputerItem].style.boxShadow = 'none';
                   item[currentComputerItem].style.transitionDuration = '0.8s';
                   item[currentComputerItem].style.transform = "translate(-25%, -21%)";
+                  lastSwitchSound.play();
                   resolve(currentComputerItem);
                 }, 100);
               }
