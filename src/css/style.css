@@ -7,7 +7,6 @@ body .container {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-size: 11px;
   text-align: center;
@@ -153,10 +152,10 @@ body .container .results-table {
   text-align: center;
   align-items: center;
   height: 150px;
+  font-size: 70px;
 }
 body .container .won {
   font-family: "Orbitron", sans-seri;
-  font-size: 70px;
   letter-spacing: 3px;
   font-weight: 700;
   color: #dfecf3;
@@ -164,7 +163,6 @@ body .container .won {
 }
 body .container .lose {
   font-family: "Orbitron", sans-seri;
-  font-size: 70px;
   letter-spacing: 3px;
   font-weight: 700;
   color: #dfecf3;
@@ -172,7 +170,6 @@ body .container .lose {
 }
 body .container .draw {
   font-family: "Orbitron", sans-seri;
-  font-size: 70px;
   letter-spacing: 3px;
   font-weight: 700;
   color: #dfecf3;
@@ -232,6 +229,7 @@ body .container .game-table .scissors {
   }
   body .container .results-table {
     height: 130px;
+    font-size: 50px;
   }
   body .container .game-table {
     width: 320px;
@@ -289,6 +287,7 @@ body .container .game-table .scissors {
   }
   body .container .results-table {
     height: 110px;
+    font-size: 40px;
   }
   body .container .game-table {
     width: 220px;
@@ -369,6 +368,7 @@ body .container .game-table .scissors {
   }
   body .container .results-table {
     height: 70px;
+    font-size: 35px;
   }
   body .container .game-table {
     width: 210px;
