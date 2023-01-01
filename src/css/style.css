@@ -299,7 +299,7 @@ body .container .game-table .scissors {
     border: double 13px transparent;
   }
   body .container .game-table .item img {
-    height: 63%;
+    height: 57%;
   }
   body .container .game-table .rock {
     box-shadow: 0 7px rgb(211, 150, 15), 0 5px rgba(113, 113, 113, 0.42) inset;
