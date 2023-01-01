@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   background: radial-gradient(circle at top, #1c4261 0%, rgb(2, 0, 36) 100%);
-  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body .container {
   height: 100vh;
