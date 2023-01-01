@@ -3,7 +3,6 @@ body
   justify-content: center
   background: radial-gradient(circle at top, #1c4261 0%, rgba(2,0,36,1) 100%)
   .container
-    width: 1080px
     height: 100vh
     display: flex
     flex-direction: column
@@ -167,7 +166,7 @@ body
       margin-top: 30px
       width: 370px
       height: 427px
-      background-size: contain
+      background-size: 100%
       background-image: url(../images/bg-triangle.svg)
       background-position: top
       background-repeat: no-repeat
@@ -180,11 +179,11 @@ body
         height: 100px
         background-color: #dfecf3
         border-radius: 100%
+        border: double 20px transparent
         cursor: pointer
       .rock
         left: 0px
         transform: translate(83%, 25%) rotate(-45deg)
-        border: double 20px transparent
         background-image: linear-gradient(white, white), radial-gradient(circle at top left, #e9c31b,#f3dc75)
         background-origin: border-box
         background-clip: padding-box, border-box
@@ -192,7 +191,6 @@ body
       .paper
         left: 314px
         transform: translate(-141%, 25%) rotate(-45deg)
-        border: double 20px transparent
         background-image: linear-gradient(white, white), radial-gradient(circle at top left, #03c48a,#33e6b0)
         background-origin: border-box
         background-clip: padding-box, border-box
@@ -201,8 +199,8 @@ body
         left: 150px
         top: 258px
         transform: translate(-24%, -159%) rotate(-45deg)
-        border: double 20px transparent
         background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f38ae2,#fcaeef)
         background-origin: border-box
         background-clip: padding-box, border-box
         box-shadow: 0 8px rgb(180, 90, 174) , 0 6px rgb(113 113 113 / 42%) inset
+@import 'media'
