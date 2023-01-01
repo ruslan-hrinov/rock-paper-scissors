@@ -1,7 +1,5 @@
 import itemsMoveIntoPosition from "./itemsMoveIntoPosition";
 const gameProcess = () => {
-  const switchingSound = new Audio('https://www.fesliyanstudios.com/play-mp3/2910');
-  const lastSwitchSound = new Audio('https://www.fesliyanstudios.com/play-mp3/5269');
   const item = document.querySelectorAll('.item');
   const gameTable = document.querySelector('.game-table');
   const resultsTable = document.querySelector('.results-table');
@@ -121,7 +119,7 @@ const gameProcess = () => {
             return computerItem;
           };
           function recursion(randomNumber, computerItem) {
-            setTimeout(() => { item[computerItem].style.filter = 'brightness(70%)'; switchingSound.play(); }, 120);
+            setTimeout(() => { item[computerItem].style.filter = 'brightness(70%)' }, 120);
             setTimeout(() => { item[computerItem].style.filter = 'brightness(30%)' }, 500);
             randomNumber -= 1;
             let currentComputerItem = itemGenerator(computerItem);
@@ -134,7 +132,6 @@ const gameProcess = () => {
                   item[currentComputerItem].style.boxShadow = 'none';
                   item[currentComputerItem].style.transitionDuration = '0.8s';
                   item[currentComputerItem].style.transform = "translate(-25%, -21%)";
-                  lastSwitchSound.play();
                   resolve(currentComputerItem);
                 }, 100);
               }

@@ -179,7 +179,7 @@ body .container .game-table {
   position: relative;
   margin-top: 30px;
   width: 370px;
-  height: 427px;
+  height: 370px;
   background-size: 100%;
   background-image: url(../images/bg-triangle.svg);
   background-position: top;
@@ -294,9 +294,9 @@ body .container .game-table .scissors {
     height: 220px;
   }
   body .container .game-table .item {
-    width: 73px;
-    height: 73px;
-    border: double 15px transparent;
+    width: 54px;
+    height: 54px;
+    border: double 13px transparent;
   }
   body .container .game-table .item img {
     height: 63%;
@@ -310,8 +310,8 @@ body .container .game-table .scissors {
   }
   body .container .game-table .scissors {
     box-shadow: 0 7px rgb(180, 90, 174), 0 5px rgba(113, 113, 113, 0.42) inset;
-    left: 86px;
-    top: 151px;
+    left: 85px;
+    top: 147px;
   }
 }
 @media (max-width: 320px) {
