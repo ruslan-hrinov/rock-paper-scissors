@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   background: radial-gradient(circle at top, #1c4261 0%, rgb(2, 0, 36) 100%);
+  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body .container {
   height: 100vh;
@@ -302,14 +303,14 @@ body .container .game-table .scissors {
     height: 57%;
   }
   body .container .game-table .rock {
-    box-shadow: 0 7px rgb(211, 150, 15), 0 5px rgba(113, 113, 113, 0.42) inset;
+    box-shadow: 0 6px rgb(211, 150, 15), 0 4px rgba(113, 113, 113, 0.42) inset;
   }
   body .container .game-table .paper {
-    box-shadow: 0 7px rgb(12, 125, 98), 0 5px rgba(113, 113, 113, 0.42) inset;
+    box-shadow: 0 6px rgb(12, 125, 98), 0 4px rgba(113, 113, 113, 0.42) inset;
     left: 179px;
   }
   body .container .game-table .scissors {
-    box-shadow: 0 7px rgb(180, 90, 174), 0 5px rgba(113, 113, 113, 0.42) inset;
+    box-shadow: 0 6px rgb(180, 90, 174), 0 4px rgba(113, 113, 113, 0.42) inset;
     left: 85px;
     top: 147px;
   }
@@ -383,14 +384,14 @@ body .container .game-table .scissors {
     height: 55%;
   }
   body .container .game-table .rock {
-    box-shadow: 0 7px rgb(211, 150, 15), 0 5px rgba(113, 113, 113, 0.42) inset;
+    box-shadow: 0 5px rgb(211, 150, 15), 0 4px rgba(113, 113, 113, 0.42) inset;
   }
   body .container .game-table .paper {
-    box-shadow: 0 7px rgb(12, 125, 98), 0 5px rgba(113, 113, 113, 0.42) inset;
+    box-shadow: 0 5px rgb(12, 125, 98), 0 4px rgba(113, 113, 113, 0.42) inset;
     left: 168px;
   }
   body .container .game-table .scissors {
-    box-shadow: 0 7px rgb(180, 90, 174), 0 5px rgba(113, 113, 113, 0.42) inset;
+    box-shadow: 0 5px rgb(180, 90, 174), 0 4px rgba(113, 113, 113, 0.42) inset;
     left: 80px;
     top: 139px;
   }

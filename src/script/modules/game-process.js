@@ -9,6 +9,9 @@ const gameProcess = () => {
   let winScore = +firstScore.getAttribute('data-score');
   const secondScore = document.querySelector('.second-score-table .score');
   const secondScoreTable = document.querySelector('.second-score-table');
+  const rockShadow = window.getComputedStyle(document.querySelector('.rock')).boxShadow;
+  const paperShadow = window.getComputedStyle(document.querySelector('.paper')).boxShadow;
+  const scissorsShadow = window.getComputedStyle(document.querySelector('.scissors')).boxShadow;
   let loseScore = +firstScore.getAttribute('data-score');
   let elementsWithoutEvent = [];
   const readyToStartNewGame = () => {
@@ -64,7 +67,7 @@ const gameProcess = () => {
           gameTable.append(newScissorsItem);
           elementWithEvent.style.filter = 'brightness(30%)';
           newScissorsItem.style.boxShadow = 'none';
-          elementWithEvent.style.boxShadow = '0 8px rgb(180, 90, 174) , 0 6px rgb(113 113 113 / 42%) inset';
+          elementWithEvent.style.boxShadow = scissorsShadow;
           newScissorsItem.style.transform = 'translate(-25%, -25%) rotate(0deg)';
           const animation = newScissorsItem.animate([
             { transform: 'translate(-25%, -25%) rotate(0deg)' },
@@ -88,7 +91,7 @@ const gameProcess = () => {
           gameTable.append(newPaperItem);
           elementWithEvent.style.filter = 'brightness(30%)';
           newPaperItem.style.boxShadow = 'none';
-          elementWithEvent.style.boxShadow = '0 8px rgb(12, 125, 98) , 0 6px rgb(113 113 113 / 42%) inset';
+          elementWithEvent.style.boxShadow = paperShadow;
           newPaperItem.style.transform = 'translate(-25%, -25%) rotate(0deg)';
           const animation = newPaperItem.animate([
             { transform: 'translate(-25%, -25%) rotate(0deg)' },
@@ -112,7 +115,7 @@ const gameProcess = () => {
           gameTable.append(newRockItem);
           elementWithEvent.style.filter = 'brightness(30%)';
           newRockItem.style.boxShadow = 'none';
-          elementWithEvent.style.boxShadow = '0 8px rgb(211, 150, 15) , 0 6px rgb(113 113 113 / 42%) inset';
+          elementWithEvent.style.boxShadow = rockShadow;
           newRockItem.style.transform = 'translate(-25%, -25%) rotate(0deg)';
           const animation = newRockItem.animate([
             { transform: 'translate(-25%, -25%) rotate(0deg)' },
@@ -293,13 +296,13 @@ const gameProcess = () => {
               };
               item.forEach((element) => {
                 if (element.className === 'item scissors') {
-                  element.style.boxShadow = '0 8px rgb(180, 90, 174) , 0 6px rgb(113 113 113 / 42%) inset';
+                  element.style.boxShadow = scissorsShadow;
                 };
                 if (element.className === 'item paper') {
-                  element.style.boxShadow = '0 8px rgb(12, 125, 98) , 0 6px rgb(113 113 113 / 42%) inset';
+                  element.style.boxShadow = paperShadow;
                 };
                 if (element.className === 'item rock') {
-                  element.style.boxShadow = '0 8px rgb(211, 150, 15) , 0 6px rgb(113 113 113 / 42%) inset';
+                  element.style.boxShadow = rockShadow;
                 };
               });
               resolve()
