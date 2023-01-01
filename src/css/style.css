@@ -371,27 +371,27 @@ body .container .game-table .scissors {
     height: 70px;
   }
   body .container .game-table {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
   }
   body .container .game-table .item {
-    width: 73px;
-    height: 73px;
-    border: double 15px transparent;
+    width: 55px;
+    height: 55px;
+    border: double 10px transparent;
   }
   body .container .game-table .item img {
-    height: 63%;
+    height: 55%;
   }
   body .container .game-table .rock {
     box-shadow: 0 7px rgb(211, 150, 15), 0 5px rgba(113, 113, 113, 0.42) inset;
   }
   body .container .game-table .paper {
     box-shadow: 0 7px rgb(12, 125, 98), 0 5px rgba(113, 113, 113, 0.42) inset;
-    left: 156px;
+    left: 168px;
   }
   body .container .game-table .scissors {
     box-shadow: 0 7px rgb(180, 90, 174), 0 5px rgba(113, 113, 113, 0.42) inset;
-    left: 78px;
-    top: 124px;
+    left: 80px;
+    top: 139px;
   }
 }/*# sourceMappingURL=style.css.map */
