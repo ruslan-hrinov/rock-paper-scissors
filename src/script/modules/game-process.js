@@ -10,6 +10,7 @@ const gameProcess = () => {
   const secondScore = document.querySelector('.second-score-table .score');
   const secondScoreTable = document.querySelector('.second-score-table');
   let loseScore = +firstScore.getAttribute('data-score');
+  let elementsWithoutEvent = [];
   const readyToStartNewGame = () => {
     item.forEach((element) => {
       element.addEventListener('click', (event) => {
@@ -24,20 +25,32 @@ const gameProcess = () => {
     new Promise((resolve) => {
       if (!gameTable.getAttribute('data-game-status')) {
         gameTable.setAttribute('data-game-status', 'in-game');
-        item.forEach((elementWithoutEvent) => {
-          if (elementWithoutEvent != elementWithEvent) {
-            const animation = elementWithoutEvent.animate([
-              { filter: 'brightness(100%)' },
-              { filter: 'brightness(30%)' },
-            ], {
-              duration: 1000,
-              iterations: 1
-            });
-            animation.finished.then(() => {
-              elementWithoutEvent.style.filter = 'brightness(30%)';
-              resolve()
-            });
+        item.forEach((element) => {
+          if (element != elementWithEvent) {
+            elementsWithoutEvent.push(element);
           }
+        });
+        const firstElementAnimation = elementsWithoutEvent[0].animate([
+          { filter: 'brightness(100%)' },
+          { filter: 'brightness(30%)' },
+        ], {
+          duration: 1000,
+          iterations: 1
+        });
+        firstElementAnimation.finished.then(() => {
+          elementsWithoutEvent[0].style.filter = 'brightness(30%)';
+          resolve()
+        });
+        const secondElementAnimation = elementsWithoutEvent[1].animate([
+          { filter: 'brightness(100%)' },
+          { filter: 'brightness(30%)' },
+        ], {
+          duration: 1000,
+          iterations: 1
+        });
+        secondElementAnimation.finished.then(() => {
+          elementsWithoutEvent[1].style.filter = 'brightness(30%)';
+          resolve()
         });
       };
     }).then(() => {
