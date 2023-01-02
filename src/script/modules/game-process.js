@@ -6,13 +6,11 @@ const gameProcess = () => {
   const resultsTable = document.querySelector('.results-table');
   const firstScore = document.querySelector('.first-score-table .score');
   const firstScoreTable = document.querySelector('.first-score-table');
-  let winScore = +firstScore.getAttribute('data-score');
   const secondScore = document.querySelector('.second-score-table .score');
   const secondScoreTable = document.querySelector('.second-score-table');
   const rockShadow = window.getComputedStyle(document.querySelector('.rock')).boxShadow;
   const paperShadow = window.getComputedStyle(document.querySelector('.paper')).boxShadow;
   const scissorsShadow = window.getComputedStyle(document.querySelector('.scissors')).boxShadow;
-  let loseScore = +firstScore.getAttribute('data-score');
   let elementsWithoutEvent = [];
   const readyToStartNewGame = () => {
     item.forEach((element) => {
@@ -170,15 +168,15 @@ const gameProcess = () => {
             setTimeout(() => {
               if (elementWithEvent.className == 'item rock' && currentComputerItem == 2) {
                 resultsTable.innerHTML = 'YOU WON'; resultsTable.classList.add('won');
-                winScore += 1; firstScore.innerHTML = winScore;
+                localStorage.setItem('winScore', +localStorage.getItem('winScore') + 1);
+                firstScore.innerHTML = +localStorage.getItem('winScore');
                 firstScoreTable.classList.add('active');
-                firstScore.setAttribute('data-score', winScore);
               }
               else if (elementWithEvent.className == 'item rock' && currentComputerItem == 1) {
                 resultsTable.innerHTML = 'YOU LOSE'; resultsTable.classList.add('lose');
-                loseScore += 1; secondScore.innerHTML = loseScore;
+                localStorage.setItem('loseScore', +localStorage.getItem('loseScore') + 1);
+                secondScore.innerHTML = +localStorage.getItem('loseScore');
                 secondScoreTable.classList.add('active');
-                secondScore.setAttribute('data-score', loseScore);
               }
               else if (elementWithEvent.className == 'item rock') {
                 resultsTable.innerHTML = 'DRAW';
@@ -186,29 +184,30 @@ const gameProcess = () => {
               };
               if (elementWithEvent.className == 'item paper' && currentComputerItem == 0) {
                 resultsTable.innerHTML = 'YOU WON'; resultsTable.classList.add('won');
-                winScore += 1; firstScore.innerHTML = winScore;
+                localStorage.setItem('winScore', +localStorage.getItem('winScore') + 1);
+                firstScore.innerHTML = +localStorage.getItem('winScore');
                 firstScoreTable.classList.add('active');
-                firstScore.setAttribute('data-score', winScore);
               } else if (elementWithEvent.className == 'item paper' && currentComputerItem == 2) {
                 resultsTable.innerHTML = 'YOU LOSE'; resultsTable.classList.add('lose');
-                loseScore += 1; secondScore.innerHTML = loseScore;
+                localStorage.setItem('loseScore', +localStorage.getItem('loseScore') + 1);
+                secondScore.innerHTML = +localStorage.getItem('loseScore');
                 secondScoreTable.classList.add('active');
-                secondScore.setAttribute('data-score', loseScore);
               } else if (elementWithEvent.className == 'item paper') {
                 resultsTable.innerHTML = 'DRAW';
                 resultsTable.classList.add('draw');
               };
               if (elementWithEvent.className == 'item scissors' && currentComputerItem == 1) {
                 resultsTable.innerHTML = 'YOU WON'; resultsTable.classList.add('won');
-                winScore += 1; firstScore.innerHTML = winScore;
+                localStorage.setItem('winScore', +localStorage.getItem('winScore') + 1);
+                firstScore.innerHTML = +localStorage.getItem('winScore');
                 firstScoreTable.classList.add('active');
-                firstScore.setAttribute('data-score', winScore);
               }
               else if (elementWithEvent.className == 'item scissors' && currentComputerItem == 0) {
                 resultsTable.innerHTML = 'YOU LOSE'; resultsTable.classList.add('lose');
-                loseScore += 1; secondScore.innerHTML = loseScore;
+                localStorage.setItem('loseScore', +localStorage.getItem('loseScore') + 1);
+                secondScore.innerHTML = +localStorage.getItem('loseScore');
                 secondScoreTable.classList.add('active');
-                secondScore.setAttribute('data-score', loseScore);
+
               }
               else if (elementWithEvent.className == 'item scissors') {
                 resultsTable.innerHTML = 'DRAW';
