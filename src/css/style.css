@@ -232,14 +232,20 @@ body .container .rules {
   height: 100px;
   width: 700px;
 }
-body .container .rules .modal-dialog {
-  opacity: 94%;
-}
-body .container .rules .modal-dialog .modal-title {
-  color: #0dcaf0;
-}
 body .container .rules img {
   width: 85%;
+}
+body .container .rules .modal-dialog {
+  opacity: 95%;
+}
+body .container .rules .modal-dialog .modal-content {
+  background-color: #14162d;
+}
+body .container .rules .modal-dialog .modal-content .modal-header .modal-title {
+  color: #0dcaf0;
+}
+body .container .rules .modal-dialog .modal-content .modal-header .btn-close {
+  background-color: #0dcaf0;
 }
 
 @media (max-width: 768px) {
