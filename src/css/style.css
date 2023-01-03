@@ -2,13 +2,15 @@ body {
   display: flex;
   justify-content: center;
   background: radial-gradient(circle at top, #1c4261 0%, rgb(2, 0, 36) 100%);
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -tap-highlight-color: rgba(0, 0, 0, 0.1);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
 }
 body .container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
   font-size: 11px;
   text-align: center;
 }
@@ -188,6 +190,7 @@ body .container .game-table {
 }
 body .container .game-table .item {
   display: flex;
+  box-sizing: content-box;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -223,6 +226,21 @@ body .container .game-table .scissors {
   background-clip: padding-box, border-box;
   box-shadow: 0 8px rgb(180, 90, 174), 0 6px rgba(113, 113, 113, 0.42) inset;
 }
+body .container .rules {
+  display: flex;
+  justify-content: right;
+  height: 100px;
+  width: 700px;
+}
+body .container .rules .modal-dialog {
+  opacity: 94%;
+}
+body .container .rules .modal-dialog .modal-title {
+  color: #0dcaf0;
+}
+body .container .rules img {
+  width: 85%;
+}
 
 @media (max-width: 768px) {
   body .container .score-box .wrapper {
@@ -252,6 +270,10 @@ body .container .game-table .scissors {
     box-shadow: 0 7px rgb(180, 90, 174), 0 5px rgba(113, 113, 113, 0.42) inset;
     left: 134px;
     top: 230px;
+  }
+  body .container .rules {
+    height: 90px;
+    width: 550px;
   }
 }
 @media (max-width: 576px) {
@@ -313,6 +335,10 @@ body .container .game-table .scissors {
     box-shadow: 0 6px rgb(180, 90, 174), 0 4px rgba(113, 113, 113, 0.42) inset;
     left: 85px;
     top: 147px;
+  }
+  body .container .rules {
+    height: 70px;
+    width: 320px;
   }
 }
 @media (max-width: 320px) {
@@ -394,5 +420,9 @@ body .container .game-table .scissors {
     box-shadow: 0 5px rgb(180, 90, 174), 0 4px rgba(113, 113, 113, 0.42) inset;
     left: 80px;
     top: 139px;
+  }
+  body .container .rules {
+    height: 60px;
+    width: 280px;
   }
 }/*# sourceMappingURL=style.css.map */

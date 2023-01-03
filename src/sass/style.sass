@@ -6,10 +6,10 @@ body
   -moz-tap-highlight-color: rgba(0,0,0,0.1)
   -webkit-appearance: none
   .container
-    height: 100vh
     display: flex
     flex-direction: column
     align-items: center
+    height: 100vh
     font-size: 11px
     text-align: center
     .score-box
@@ -172,6 +172,7 @@ body
       background-repeat: no-repeat
       .item
         display: flex
+        box-sizing: content-box
         justify-content: center
         align-items: center
         position: absolute
@@ -203,4 +204,15 @@ body
         background-origin: border-box
         background-clip: padding-box, border-box
         box-shadow: 0 8px rgb(180, 90, 174) , 0 6px rgb(113 113 113 / 42%) inset
+    .rules
+      display: flex
+      justify-content: right
+      height: 100px
+      width: 700px
+      .modal-dialog
+        opacity: 94%
+        .modal-title
+          color: #0dcaf0
+      img
+        width: 85%
 @import 'media'
